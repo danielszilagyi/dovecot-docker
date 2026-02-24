@@ -9,6 +9,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 ADD dovecot.gpg /etc/apt/keyrings/dovecot.gpg
 ADD dovecot.list /etc/apt/sources.list.d
 
+ARG TARGETARCH
 RUN if [ "$TARGETARCH" = "amd64" ]; then \
     apt-get -y update && apt-get -y install \
       tini \
