@@ -42,7 +42,7 @@ RUN if [ "$TARGETARCH" = "amd64" ]; then \
       ln -s /etc/ssl/private/ssl-cert-snakeoil.key /etc/dovecot/key.pem; \
     fi
 RUN if [ "$TARGETARCH" = "arm64" ]; then \
-    apt-get -y update && apt-get -y install \
+    apt-get -y update && apt-get upgrade -y && apt-get -y install \
       tini \
       dovecot-core \
       dovecot-gssapi \
