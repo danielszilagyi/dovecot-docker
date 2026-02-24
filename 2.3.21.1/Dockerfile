@@ -11,7 +11,7 @@ ADD dovecot.list /etc/apt/sources.list.d
 
 ARG TARGETARCH
 RUN if [ "$TARGETARCH" = "amd64" ]; then \
-    apt-get -y update && apt-get -y install \
+    apt-get -y update && apt-get upgrade -y && apt-get -y install \
       tini \
       dovecot-core \
       dovecot-gssapi \
