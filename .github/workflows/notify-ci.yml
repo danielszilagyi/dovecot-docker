@@ -1,4 +1,4 @@
-name: Notify build repo (docker-socket-proxy)
+name: Notify build repo (dovecot)
 
 on:
   push:
